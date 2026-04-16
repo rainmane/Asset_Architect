@@ -1,7 +1,8 @@
 {
+  "version": 2,
+  "public": true,
   "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
-    { "source": "/scorecard", "destination": "/scorecard.html" }
+    { "source": "/(.*)", "destination": "/$1" }
   ]
 }
