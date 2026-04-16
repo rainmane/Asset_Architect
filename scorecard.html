@@ -32,6 +32,13 @@
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); 
             text-align: center; 
         }
+        /* Logo Styling */
+        .logo {
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+            margin: 0 auto 24px auto;
+            display: block;
+        }
         h1 { 
             font-size: 1.5rem; 
             font-weight: 700;
@@ -81,11 +88,14 @@
             margin-top: 24px; 
             font-size: 0.8rem; 
             color: #94a3b8; 
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="/logo.png" alt="Asset Architect Logo" class="logo">
+
         <h1>Confirm your email.</h1>
         <p>To access the <strong>MTR Readiness Scorecard</strong>, please verify your address in two quick steps:</p>
         
@@ -93,7 +103,7 @@
             <div class="step-number">1</div>
             <div class="step-content">
                 <strong>Open your inbox</strong>
-                <span>Look for an email from "Asset Architect"</span>
+                <span>Look for an email from "Asset Architect". Check your Spam or Promotions folder if it doesn't arrive in 60 seconds.</span>
             </div>
         </div>
         
@@ -106,7 +116,7 @@
         </div>
 
         <div class="footer-note">
-            Check your Spam or Promotions folder if it doesn't arrive in 60 seconds.
+            If you don't see the scorecard in 60 seconds, check your Promotions/Spam folder—sometimes our data is too 'hot' for Gmail to handle &#128522;
         </div>
     </div>
 </body>
