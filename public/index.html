@@ -18,14 +18,24 @@
             color: #1e293b;
         }
         .container {
+            width: 100%;
             max-width: 600px;
             text-align: center;
             padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        /* Logo Styling */
+        .logo {
+            width: 100px; /* Slightly larger for the homepage */
+            height: auto;
+            margin: 0 auto 32px auto;
+            display: block;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
             letter-spacing: -0.025em;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
         p {
             font-size: 1.125rem;
@@ -39,16 +49,23 @@
             border-radius: 16px;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
-        /* This ensures the Beehiiv iframe fits perfectly */
         .beehiiv-embed {
             margin: 0 auto !important;
             display: block;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.75rem; }
+            .container { padding-top: 20px; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <img src="/logo.png" alt="Asset Architect Logo" class="logo">
+
         <h1>Is your rental leaving $1,800 a month on the table?</h1>
         <p>Most properties are set up for long-term tenants or weekend tourists, missing the high-paying corporate market in between. Take the 10-point MTR Readiness Audit to see if your property qualifies for a "Mid-Term" premium.</p>
         
