@@ -2,63 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Asset Architect | MTR Readiness Audit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
+            background-color: var(--bg);
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            color: #1e293b;
-        }
-        .container {
-            width: 100%;
-            max-width: 600px;
-            text-align: center;
-            padding: 40px 20px;
+            color: var(--text-main);
+            padding: 20px; /* Essential for mobile edge spacing */
             box-sizing: border-box;
         }
-        /* Logo Styling */
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Logo: 180px for Desktop, smaller for Mobile via Media Query below */
         .logo {
-            width: 180px; /* Increased from 100px */
-            max-width: 80%; /* Ensures it doesn't bleed off mobile screens */
+            width: 180px; 
             height: auto;
             margin: 0 auto 32px auto;
             display: block;
         }
+
         h1 {
-            font-size: 2.25rem;
-            letter-spacing: -0.025em;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 2.5rem;
+            letter-spacing: -0.04em;
+            margin-bottom: 1.25rem;
+            line-height: 1.1;
+            font-weight: 700;
         }
+
         p {
             font-size: 1.125rem;
-            color: #64748b;
+            color: var(--text-sub);
             margin-bottom: 2.5rem;
             line-height: 1.6;
         }
+
         .form-wrapper {
             background: white;
-            padding: 10px;
+            padding: 8px; /* Tightened for mobile */
             border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        .beehiiv-embed {
-            margin: 0 auto !important;
-            display: block;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
         }
 
-        /* Mobile adjustments */
+        /* Responsive Adjustments for Mobile */
         @media (max-width: 480px) {
-            h1 { font-size: 1.75rem; }
-            .container { padding-top: 20px; }
+            .logo {
+                width: 140px; /* Scales down slightly so it's not overwhelming */
+                margin-bottom: 24px;
+            }
+
+            h1 {
+                font-size: 1.85rem; /* Prevents giant text from breaking layout */
+                padding: 0 10px;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .container {
+                padding: 10px 0;
+            }
         }
     </style>
 </head>
@@ -68,7 +93,7 @@
         <img src="/logo.png" alt="Asset Architect Logo" class="logo">
 
         <h1>Is your rental leaving $1,800 a month on the table?</h1>
-        <p>Most properties are set up for long-term tenants or weekend tourists, missing the high-paying corporate market in between. Take the 10-point MTR Readiness Audit to see if your property qualifies for a "Mid-Term" premium.</p>
+        <p>Most properties are missing the high-paying corporate market. Take the 10-point MTR Readiness Audit to see if you qualify for a "Mid-Term" premium.</p>
         
         <div class="form-wrapper">
             <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
